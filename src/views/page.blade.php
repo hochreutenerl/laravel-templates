@@ -1,4 +1,4 @@
-@extends('app')
+@extends('vendor.laravel-templates.app')
 
 @section('title')
     The title of my page

@@ -1,4 +1,4 @@
-@extends('templates.form.formfield')
+@extends('vendor.laravel-templates.templates.form.formfield')
 @section('formfield')
     {{ Form::select($name, $select,  $value, array_merge(['class' => 'form-control'], $attributes)) }}
 @stop
