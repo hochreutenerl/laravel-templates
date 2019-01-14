@@ -11,6 +11,12 @@ class LaravelTemplatesServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../../views', 'laravel-templates');
 
+        $this->publishes([__DIR__ . '/../../views' => resource_path('views/vendor/laravel-templates')]);
+
+        $this->defineFormComponents();
+    }
+
+    private function defineFormComponents() {
         Form::component('helpBlock', 'templates.form.helpBlock', ['name']);
 
         $defaultParameters = ['name', 'label' => '', 'value' => null, 'attributes' => []];
