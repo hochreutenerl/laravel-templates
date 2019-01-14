@@ -1,0 +1,29 @@
+{
+    "name": "hochreutenerl/laravel-templates",
+    "description": "Some templates useful for laravel projects.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hochreutenerl",
+            "email": "luca.hochreutener@bluewin.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.7",
+        "laravelcollective/html": "^5.7"
+    },
+    "autoload": {
+        "psr-0": {
+            "Hochreutenerl\\LaravelTemplates\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hochreutenerl\\LaravelTemplates\\LaravelTemplatesServiceProvider"
+            ]
+        }
+    }
+}
