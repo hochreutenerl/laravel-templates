@@ -9,6 +9,7 @@
             {{config('app.name')}}
         @endif
     </title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @hasSection('description')
         <meta name="description" content="@yield('description')"/>
     @endif
@@ -17,18 +18,12 @@
     @endif
     <meta name="generator" content="{{config('app.name')}}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}"/>
     @stack('styles')
 </head>
 <body>
 @yield('content')
+<script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 @stack('scripts')
 </body>
 </html>
-
-@push('styles')
-    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}"/>
-@endpush
-
-@push('scripts')
-    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
-@endpush

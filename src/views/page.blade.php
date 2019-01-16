@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-    Here goes your content
+    <h1>Here goes your content</h1>
 @stop
